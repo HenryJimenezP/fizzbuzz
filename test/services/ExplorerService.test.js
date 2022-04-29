@@ -11,7 +11,9 @@ describe("Test para ExplorerService", () => {
         const quantityExplorers = ExplorerService.getAmountOfExplorersByMission(explorers, "node");
         expect(quantityExplorers).toBe(1);
     })
-    test("Obteniendo el nombre de usuario de los explorers de la mision Node", () => {
-        
+    test("Requerimiento 3: Obteniendo el nombre de usuario de los explorers de la mision Node", () => {
+        const explorers = [{mission: "node", githubUsername: "ajolonauta1"}];
+        const explorersInNode = ExplorerService.getExplorersUsernamesByMission(explorers, "node");
+        expect(explorersInNode).toBe("ajolonauta1");
     })
 })
