@@ -9,7 +9,7 @@ describe("Test para ExplorerService", () => {
     test("Obteniendo el total de explorer en la mission node", () => {
         const explorers = [{mission: "node"}];
         const quantityExplorers = ExplorerService.getAmountOfExplorersByMission(explorers, "node");
-        expect(quantityExplorers).toBe(1);
+        expect(quantityExplorers).toBe(2);
     })
     test("Obteniendo el nombre de usuario de los explorers de la mision Node", () => {
         
