@@ -21,4 +21,25 @@ describe("Test para ExplorerService", () => {
         const explorer = FizzbuzzService.applyValidationInExplorer(explorer15);
         expect(explorer).toStrictEqual({name: "Explorer15", score: 15, trick: "FIZZBUZZ"});
     });
+
+    test("Requerimiento 5: Uso de number 1 para la validacion de number", () => {
+        const explorer = FizzbuzzService.applyValidationInNumber(1);
+        expect(explorer).toBe(1)
+    });
+
+    test("Requerimiento 6: Uso de number 3 para la validacion de number", () => {
+        const explorer = FizzbuzzService.applyValidationInNumber(3);
+        expect(explorer).toBe("FIZZ")
+    });
+
+    test("Requerimiento 7: Uso de number 5 para la validacion de number", () => {
+        const explorer = FizzbuzzService.applyValidationInNumber(5);
+        expect(explorer).toBe("BUZZ")
+    });
+
+    test("Requerimiento 8: Uso de number 15 para la validacion de number", () => {
+        const explorer = FizzbuzzService.applyValidationInNumber(15);
+        expect(explorer).toBe("FIZZBUZZ")
+    });
+
 })
